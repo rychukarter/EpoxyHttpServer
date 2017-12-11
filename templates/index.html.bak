@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+<body>
+<div>
+    <h1>CONTROL PANEL</h1>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="clientId">Client ID:</label>
+            <input type="number" class="form-control" id="clientId" aria-describedby="client id"
+                   placeholder="client id">
+        </div>
+    </div>
+    <button id="btn-start-client" class="btn btn-primary">Start client</button>
+    <button id="btn-stop-client" class="btn btn-primary">Stop client</button>
+    <p class="text-success" id="success-info"></p>
+    <p class="text-danger" id="fail-info"></p>
+</div>
+
+<div>
+    <h1>DEVICE CONTROL PANEL</h1>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="ServerIp">Server IP:</label>
+            <input type="text" class="form-control" id="ServerIp" aria-describedby="server ip"
+                   placeholder="server ip">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="ServerPort">Server Port:</label>
+            <input type="number" class="form-control" id="ServerPort" aria-describedby="server port"
+                   placeholder="server port">
+        </div>
+    </div>
+    <button id="btn-connect-client" class="btn btn-primary">Connect client</button>
+    <button id="btn-disconnect-client" class="btn btn-primary">Disconnect client</button>
+    <p class="text-success" id="success-connect-info"></p>
+    <p class="text-danger" id="fail-connect-info"></p>
+</div>
+
+<div>
+    <h1>MEASUREMENT CONTROL PANEL</h1>
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="CalibrationChannel">Calibration Channel:</label>
+                    <input type="number" class="form-control" id="CalibrationChannel" aria-describedby="cchannel"
+                           placeholder="calibration channel">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="CalibrationResistance">Calibration Resistance:</label>
+                    <input type="number" class="form-control" id="CalibrationResistance" aria-describedby="cres"
+                           placeholder="calibration resistance">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="CalibrationFrequency">Calibration Frequency:</label>
+                    <input type="number" class="form-control" id="CalibrationFrequency" aria-describedby="cfreq"
+                           placeholder="calibration frequency">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="CalibrationPhase">Calibration Phase:</label>
+                    <input type="number" class="form-control" id="CalibrationPhase" aria-describedby="cphase"
+                           placeholder="calibration phase">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="MeasurementFrequency">Measurement Frequency:</label>
+                    <input type="number" class="form-control" id="MeasurementFrequency" aria-describedby="cchannel"
+                           placeholder="measurement frequency">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="TimeBetween">Time Between:</label>
+                    <input type="number" class="form-control" id="TimeBetween" aria-describedby="cres"
+                           placeholder="time between">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="MeasurementNumber">Measurement Number: </label>
+                    <input type="number" class="form-control" id="MeasurementNumber" aria-describedby="cfreq"
+                           placeholder="measurement number">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="ChannelNumber">Channel Number:</label>
+                    <input type="number" class="form-control" id="ChannelNumber" aria-describedby="cphase"
+                           placeholder="channel number">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<button id="btn-start-calibration" class="btn btn-primary">Start Calibration</button>
+<button id="btn-start-measurement" class="btn btn-primary">Start Measurement</button>
+<button id="btn-stop-measurement" class="btn btn-primary">Stop Measurement</button>
+<p class="text-success" id="success-action-info"></p>
+<p class="text-danger" id="fail-action-info"></p>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+</body>
+</html>
